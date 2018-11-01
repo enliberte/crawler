@@ -52,11 +52,11 @@ class Spider:
                 self.get_data()
 
     def start(self):
+        start_time = time.time()
         self.move()
+        print('Execution time: %s seconds' % int(time.time() - start_time))
 
 if __name__ == '__main__':
-    start_time = time.time()
     index = 'https://www.raiffeisen.ru/'
     raiff_spider = Spider(index)
     raiff_spider.start()
-    print('Execution time: %s seconds' % int(time.time() - start_time))
